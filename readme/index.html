@@ -1,0 +1,336 @@
+<html xmlns="http://www.w3.org/1999/xhtml"  > 
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Four Colors</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<link href="styles/shCore.css" rel="stylesheet" type="text/css" >
+	<link href="styles/shCoreDefault.css" rel="stylesheet" type="text/css" >
+	<link href="styles/shThemeDefault.css" rel="stylesheet" type="text/css" >
+	
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+	
+	<script type="text/javascript" src="scripts/shCore.js"></script>
+	<script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="scripts/shBrushXml.js"></script>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Four Colors&rdquo; Documentation by &ldquo;Code This Lab S.r.l.&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Four Colors&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 28/02/2017<br>
+					By: <a href="http://www.codethislab.com" target="_blank">Code This Lab S.r.l.</a><br>
+					Email: <a href="mailto:info@codethislab.com">info@codethislab.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our game. If you have any questions that are beyond the scope of this help file, please feel free to email via user page contact form <a href="http://codecanyon.net/user/codethislab?ref=codethislab">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#desc">Description</a></li>
+			<li><a href="#content">Folder Contents</a></li>
+			<li><a href="#start">Getting Started</a></li>
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">Source Code</a></li>
+			<li><a href="#game_function">Game functions</a></li>
+			<li><a href="#change_graphics">Change Graphic</a></li>
+			<li><a href="#disable_sound">Disable Sounds</a></li>
+			<li><a href="#wp">Wordpress Plugin</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="desc"><strong>A) Description</strong> - <a href="#toc">top</a></h3>
+		<p>Four Colors is a HTML5 Card Games. Face up to 3 computer-controlled opponents. Match cards by color or number, play action cards to mix the game up and be the first to get rid of all cards. Last but not least: Do not forget to press the 1 button when you have only one card left!
+		<br>
+			
+			<br>
+			The ZIP package contains the game with 1920x1080 resolution that scales to fit the whole screen device<br>
+			Just warning that for very wide screens, the game may not be perfectly full screen.
+			The game is fully compatible with all most common mobile devices.<br>
+			Sounds are enabled for mobile but we can't grant full audio compatibility on all mobile devices due to some well-know issue between some mobile-browser and HTML5.
+			So if you want to avoid sound loading, please read <a href="#disable_sound">Disable Sound</a> section). <br>
+			<strong>WARNING:</strong> Sounds can't be enabled for Windows Phone as this kind of device have unsolved issues with 'audio' and 'video' tag.
+			
+		</p>
+		<hr>
+		
+		<h3 id="content"><strong>B) Folder Contents</strong> - <a href="#toc">top</a></h3>
+		<p>
+			The item package contains the following folders:
+			<ul>
+			<li><strong>ctl_arcade_wp_plugin</strong>:<br> This folder contains the game version (zip file inside) that can be used with wordpress plugin <a href="https://codecanyon.net/item/ctl-arcade-wordpress-plugin/13856421">CTL Arcade</a><br/><br/></li>
+			<li><strong>game</strong>:<br> This folder contains the full source code that you can edit as you need.<br/><br/></li>
+			<li><strong>live_demo</strong>:<br>This folder contains the obfuscated version of the game. <strong>WARNING</strong>: you should use this version if you don't have to edit the original game.<br/><br/></li>
+			<li><strong>readme</strong>:<br>This folder contains the readme of the game.
+			</ul>
+		</p>
+		<hr>    
+		
+		<h3 id="start"><strong>C)Getting Started</strong> - <a href="#toc">top</a></h3>
+			<p>To install the game just upload on your server the game folder live_demo.
+			
+			<ul>
+				<li><strong>Game Embedding: </strong>The proper way to embed the game is in a full-screen web page or in an iframe.<br>
+                                        In the first case the game will fit the screen size, in the second, that of the iframe.<br>
+                                        If the iframe size matches that of the screen, the game will fit accordingly.<br> 
+                                        The alignment will be proportioned to the aspect ratio of the game.<br>
+                                        To install the game in a WordPress website, we suggest to use our plugin <a href="http://codecanyon.net/item/ctl-arcade-wordpress-plugin/13856421?ref=codethislab"> CTL Arcade </a>. <br><br>
+
+				<li> <strong>Localization:</strong> You can easily change game text for different languages, changing string in <strong>CLang.js</strong></li>
+				
+				<pre class="brush: js">
+					TEXT_GAMEOVER  = "CONGRATULATION! YOU WON!";
+					TEXT_LOSE = "SORRY, THE PLAYER ";
+					TEXT_LOSE2 = " WON THIS GAME";
+					TEXT_SCORE     = "YOUR SCORE";
+					TEXT_RESTART   = "RESTART";
+					TEXT_MOVES      = "MOVES";
+					TEXT_ARE_SURE = "ARE YOU SURE?";
+					TEXT_SELECT_PLAYERS = "SELECT THE NUMBER OF PLAYERS !";
+					TEXT_SELECT_COLOR = "SELECT A COLOR ";
+					TEXT_PLAYER = "PLAYER";
+					TEXT_TUTORIAL1 = "WELCOME TO FOUR COLORS! MATCH CARDS BY COLOR OR NUMBER AND BE THE FIRST TO GET RID OF THEM!";
+					TEXT_TUTORIAL2 = "ACTION CARDS WILL MIX THE GAME UP!\n\nDRAW TWO FORCES THE NEXT PLAYER TO PICK TWO CARDS AND FORFEIT THE TURN";
+					TEXT_TUTORIAL3 = "SKIP CARD STOPS THE NEXT PLAYER";
+					TEXT_TUTORIAL4 = "REVERSE CARD SWITCHES THE GAME WISE";
+					TEXT_TUTORIAL5 = "THE WILD CARD CAN BE PLACED ON ANY CARD AT ANY TIME AND ALLOWS YOU TO CHANGE THE COLOR TO PLAY ";
+					TEXT_TUTORIAL6 = "THE WILD DRAW FOUR IS A SPECIAL WILD THAT ALLOWS YOU TO CHANGE THE COLOR AND FORCES THE NEXT PLAYER TO PICK 4 CARDS. TO USE THIS CARD YOU MUST HAVE NO OTHER ALTERNATIVE CARDS TO PLAY";
+					TEXT_TUTORIAL7 = "DO NOT FORGET TO PRESS THE 1 BUTTON WHEN YOU'LL HAVE ONLY ONE CARD LEFT OR YOU'LL PICK 2 PENALTY CARDS!";
+				</pre>
+			</ul>
+			</p>
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>D)HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This game have the canvas tag in the body. The ready event into the body calls the main function of the game: CMain(). 
+		<br>The head section declares all the javascript functions of the game. The whole project uses a typical object-oriented approach.<br> 
+		In the init function there are 6 mapped <a href="#events">events</a> that can be useful eventually for stats</p>
+		
+		<pre class="brush: js">
+			<body  ondragstart="return false;" ondrop="return false;" >
+				  <script>
+				   $(document).ready(function(){
+							$(oMain).on("start_session", function(evt) {
+									//THIS EVENT IS TRIGGERED WHEN PLAY BUTTON IN MENU SCREEN IS CLICKED
+							 });
+							 
+							$(oMain).on("end_session", function(evt) {
+									//THIS EVENT IS TRIGGERED WHEN THE EXIT BUTTON IS CLICKED.
+							});
+							
+							$(oMain).on("select_players", function(evt,iNumPlayers){
+									//...ADD YOUR CODE HERE EVENTUALLY
+							});
+							 
+							$(oMain).on("save_score", function(evt,iScore, szMode) {
+									//THIS EVENT IS TRIGGERED WHEN GAME IS OVER. IT CAN BE USEFUL TO CALL PHP SCRIPTS (NOT PROVIDED IN THE PACKAGE) THAT SAVE THE SCORE.
+							 });
+							 
+							 $(oMain).on("show_interlevel_ad", function(evt) {
+									//THIS EVENT IS TRIGGERED WHEN GAME IS OVER. MAY BE USEFUL TO CALL ADS SCRIPT.
+							 });
+							 
+							 $(oMain).on("share_event", function(evt,iScore) {
+									//THIS EVENT IS TRIGGERED WHEN GAME OVER IS SHOWN.
+							 });
+						   });
+						
+				  </script>
+				  
+				<canvas id="canvas" class='ani_hack' width="1920" height="1080"> </canvas>
+			</body>
+		</pre>
+		<li><strong>Game option:</strong> You can easily customize game setting when creating a new instance of the game in <strong>index.html</strong> file</li>
+				<pre class="brush: js">
+					var oMain = new CMain({
+											starting_num_cards: 7,
+                                            fullscreen: true,
+                                            check_orientation: true
+                                            
+                                           });
+				</pre>
+		<hr>
+
+		<h3 id="cssFiles"><strong>E) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>The game use two CSS files. The first one is a generic reset file. Many browser interpret the default behavior of html elements differently. By using a general reset CSS file, we can work round this. 
+		Keep in mind, that these values might be overridden somewhere else in the file.</p> 
+
+		<p>The second file contains all of the specific stylings for the canvas and some hack to be fully compatible with all most popular mobile devices</p>  
+
+		<hr>
+		
+		<h3 id="javascript"><strong>F) Source Code</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This game contains:</p>
+		
+		<ol>
+			<li>jQuery</li>
+			<li>Our custom scripts</li>
+			<li>CreateJs plugin</li>
+			<li>Howler Sound library</li>
+		</ol>
+		  
+		<ol>
+			<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li>The game have the following js files:
+	
+			<ul>
+				<li>CMain: the main class called by the index file. <br>This file controls the sprite_lib.js file that manages the sprite loading, the loop game and initialize the canvas with the CreateJs library</li>
+				<li>ctl_utils: this file manages the canvas resize and its centering</li>
+				<li>sprite_lib: this class loads all images declared in the main class</li>
+				<li>settings: general game settings</li>
+				<li>CLang: global string variables for language localization</li>
+				<li>CPreloader: simple text preloader to show resources loading progress</li>
+				<li>CMenu: simple menu with the play button</li>
+				<li>CGfxButton: this class create a standard button</li>
+				<li>CToggle: this class create a standard toggle button</li>
+				<li>CTextButton: this class create a standard text button</li>
+				<li>CGame: this class manages the game logic</li>
+				<li>CInterface: this class controls game GUI that contains text and buttons</li>
+				<li>CCard: this class manages the cards</li>
+				<li>CHandDisplayer: this class manages the hand of any player.</li>
+				<li>CDeckDisplayer: this class manages the decks in the game.</li>
+				<li>CAnimation: this class manages the animation of all special cards in the game.</li>
+			</ul>
+
+			</li>
+			
+			<li>CreateJs is a suite of modular libraries and tools which work together to enable rich interactive content on open web technologies via HTML5.
+			</li>
+			
+			<li>Howler is a javascript Audio library.
+			</li>
+		</ol>
+		
+		<p>Resuming, the complete game flow is the following: </p>
+		<ol>
+			<li>The index.html file calls the CMain.js file after ready event is called</li>
+			<li>The main class calls CPreloader.js to init preloader text and start sprite loading</li>
+			<li>When all sprites contained in "/sprites" and "/sounds" folder are loaded, the main class removes the preloader and calls the CMenu.js file that shows the main menu</li>
+			<li>If the user click the Play button in main menu, the CSelectPlayers.js class is called, and the game wait for an input</li>
+			<li>If the user click of 1 of 3 icons on the screen, the CGame.js class is called, and game starts</li>
+			<li>If the user click on the exit button in the up-right corner, the CAreYouSurePanel.js class is called, and the game wait for an input</li>
+			<li>If the user click the "YES" button, the game returns to the menu screen, otherwise, the game resumes<li>
+		</ol>		
+		
+		<hr>
+		
+		<h3 id="game_function"><strong>G) Game functions</strong> - <a href="#toc">top</a></h3>
+			In this section will be explained all the most important functions used in <strong>CGame.js</strong> file. <br><br>
+		
+		<ul>
+			<li><strong>_init()</strong> <br>
+				This function attach on the canvas some game sprites like background (oBg)and the GUI,and it create a new instance of CPanelTutorial.js Class.
+			</li>
+			<li><strong>startGame()</strong> <br>
+				This function start the distribuition of the cards.
+			</li>
+			<li><strong>playedCard()</strong> <br>
+				This function manage the selected card.
+			</li>
+			<li><strong>applyEffectOnCard()</strong> <br>
+				This function apply special effect of the selected card.
+			</li>
+			<li><strong>onNextTurn()</strong> <br>
+				This function is called after that effect of the selected card is applied.
+			</li>
+			<li><strong>declareUNO()</strong> <br>
+				This function is called when the button "1" is called.
+			</li>
+			<li><strong>unload</strong> <br>
+				This function is called when user want to exit from the game.
+			</li>
+			<li><strong>gameOver()</strong> <br>
+				This function is called when game is over.
+			</li>
+			<li><strong>update()</strong> <br>
+				This function manages the main game loop.
+			</li>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="change_graphics"><strong>H) Change Graphic</strong> - <a href="#toc">top</a></h3>
+		<p>
+			You can easily change all the game graphic, replacing all the file you need in the "/sprites" folder. Just respect file format (.png or .jpg) and size if you don't want to change any code line.<br>
+		</p>
+
+		<h3 id="disable_sound"><strong>I) Disable Sounds</strong> - <a href="#toc">top</a></h3>
+		<p>If you want to disable all the sounds for mobile devices, you have to change the following value in settings.js file:</p>
+			<pre class="brush: js">var DISABLE_SOUND_MOBILE = true;</pre>
+		
+		<br><br>
+		
+		<h3 id="wp"><strong>J) Wordpress Plugin</strong> - <a href="#toc">top</a></h3>
+		<p><a href="http://codecanyon.net/item/ctl-arcade-wordpress-plugin/13856421?ref=codethislab">CTL Arcade</a> will allow you to add a real arcade on your worpress website, in this way your users will be more involved and will stay connected longer.<br><br>
+			It's possible to add Ads banner at the beginning of each game and at the end of each level. This will give you a new tool to increase your revenues.<br><br>
+			Your own users will promote your website sharing their scores on the main Social Networks, with no extra costs for you.<br><br>
+			You'll get by default the score-sharing on Twitter. To add Facebook just follow the guideline below.<br><br>
+			3 widgets can be added in your pages through a shortcode.<br>
+			<ul>
+				<li><strong>Game iframe</strong></li>
+				<li><strong>Rate the Game</strong></li>
+				<li><strong>Leaderboard</strong></li>
+			</ul>
+			Minimum Requirements:<br><br>
+			<ul>
+				<li><strong>PHP 4.3</strong></li>
+				<li><strong>WordPress 4.3.1</strong></li>
+				<li><strong>HTML5</strong></li>
+				<li><strong>Canvas</strong></li>
+				<li><strong>Javascript / jQuery</strong></li>
+			</ul>
+			
+			<strong>This plugin is designed to work only with games built by Code This Lab.</strong>
+			<br><br>
+			You can find it <a href="http://codecanyon.net/item/ctl-arcade-wordpress-plugin/13856421?ref=codethislab">here!</a> 
+			
+		</p>
+		<a href="http://codecanyon.net/item/ctl-arcade-wordpress-plugin/13856421?ref=codethislab">
+			<img src="assets/images/ctl_arcade.jpg" alt="ctl arcade" />
+		</a>
+		
+		<br><br>
+		
+		<p>Once again, thank you so much for purchasing this game. Feel free to contact us if you have any questions or issue relating to this game. No guarantees, but we'll do our best to assist.</p> 
+		
+		<p class="append-bottom alt large"><a href="http://www.codethislab.com" target="_blank"><strong>CODE THIS LAB S.R.L.</strong></a></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div>
+	<!-- end div .container -->
+
+	<!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+	<script type="text/javascript">
+		 SyntaxHighlighter.all()
+	</script>
+</body>
+</html>
